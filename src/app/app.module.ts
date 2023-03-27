@@ -1,3 +1,4 @@
+import { AccessComponent } from './access/access.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -12,11 +13,12 @@ import { AddcontactComponent } from './addcontact/addcontact.component';
     AppComponent,
     HomeComponent,
     ContactComponent,
-    AddcontactComponent
+    AddcontactComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AccessComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
