@@ -1,3 +1,4 @@
+import { StatusComponent } from './status/status.component';
 import { AddcontactComponent } from './addcontact/addcontact.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
@@ -18,6 +19,15 @@ const routes: Routes = [
     path: 'access',
     loadChildren: () =>
       import('./access/access.module').then((opt) => opt.AccessModule),
+  },
+  {
+    path: 'login',
+    loadComponent: () =>
+      import('./login/login.component').then((opt) => opt.LoginComponent),
+  },
+  {
+    path: '**',
+    component: StatusComponent,
   },
 ];
 
