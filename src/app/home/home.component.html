@@ -1,1 +1,9 @@
-<p>home works!</p>
+<h4>{{headerName}}</h4>
+
+<h4>My slary is {{salary | currency: "USD"}} </h4>
+
+<br/>
+
+<input type="text" (change)="handleClick(input.value)" #input/>
+
+<button (click)="handleClick('hello')"> Click </button>
