@@ -1,9 +1,19 @@
-<h4>{{headerName}}</h4>
+<h4 [ngStyle]="headStyle">{{headerName}}</h4>
 
-<h4>My slary is {{salary | currency: "USD"}} </h4>
+<h4 *ngIf="salary > 0" [ngClass]="{head: isDisabled}">My slary is {{salary | currency: "USD"}} </h4>
 
-<br/>
+<button (click)="handleFontSize()">Up</button>
 
-<input type="text" (change)="handleClick(input.value)" #input/>
+<br />
+
+<input [disabled]="isDisabled" [value]="salary" type="text" (click)="handleClick(input.value)" #input />
 
 <button (click)="handleClick('hello')"> Click </button>
+
+<br />
+<br />
+<input [(ngModel)]="headerName" />
+
+<ul>
+    <li *ngFor="let item of array">{{item}}</li>
+</ul>
