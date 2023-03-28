@@ -1,10 +1,10 @@
+import { MaterialModule } from './../../Material-Module';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MaterialModule],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })

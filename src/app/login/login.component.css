@@ -1,0 +1,9 @@
+.ng-star-inserted {
+    width: 100%;
+}
+
+.button-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
